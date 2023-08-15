@@ -1,0 +1,14 @@
+# Respect default shortcuts.
+$include /etc/inputrc
+
+## arrow up
+"\e[A":history-search-backward
+## arrow down
+"\e[B":history-search-forward
+
+set show-all-if-ambiguous on
+set menu-complete-display-prefix on
+TAB: menu-complete
+set colored-completion-prefix on
+set colored-stats on
+

@@ -1,0 +1,1 @@
+../../../.local/src/fish/kubectl/completions/kubectl.fish

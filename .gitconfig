@@ -1,0 +1,26 @@
+[pull]
+  rebase = true
+[rebase]
+  autostash = true
+  autosquash = true
+[rerere]
+  enabled = true
+[branch]
+  autosetupmerge = true
+[user]
+  email = 363388+LittlestFluffy@users.noreply.github.com
+  name = LittlestFluffy
+[core]
+  editor = vim
+  fileMode = false
+[alias]
+  housekeeping = "!git fetch -p && for branch in \"`git branch -vv | grep ': gone]' | awk '{print $1}'`\"; do test -z $branch || git branch -D $branch; done"
+  fixup = "!git commit -a --fixup=$(git rev-parse HEAD)"
+  pullforce = !"git fetch --all; git reset --hard HEAD; git merge @{u}"
+  pullstash = !"git fetch --all; git stash; git merge @{u}; git stash pop"
+[init]
+  defaultBranch = main
+[fetch]
+  prune = true
+[status]
+  short = true
